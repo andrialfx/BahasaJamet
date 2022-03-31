@@ -1,7 +1,7 @@
 from sly import Lexer
 
-class BasicLexer(Lexer):
-    tokens = { NAME, NUMBER, STRING, IF, PRINT, THEN, ELSE, FOR, FUN, TO, ARROW, EQEQ }
+class leksikal(Lexer):
+    tokens = { PRINT, NAME, NUMBER, STRING, IF, THEN, ELSE, FOR, FUN, TO, ARROW, EQEQ }
     ignore = '\t '
 
     literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
@@ -34,7 +34,7 @@ class BasicLexer(Lexer):
 
 
 if __name__ == '__main__':
-    lexer = BasicLexer()
+    lexer = leksikal()
     env = {}
     while True:
         try:

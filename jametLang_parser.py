@@ -2,8 +2,8 @@ from sly import Parser
 
 import jametLang_lexer
 
-class BasicParser(Parser):
-    tokens = jametLang_lexer.BasicLexer.tokens
+class sintaksis(Parser):
+    tokens = jametLang_lexer.leksikal.tokens
 
     precedence = (
         ('left', '+', '-'),
@@ -80,7 +80,7 @@ class BasicParser(Parser):
     @_('NUMBER')
     def expr(self, p):
         return ('num', p.NUMBER)
-        
+       
     @_('PRINT expr')
     def expr(self, p):
         return ('print', p.expr)
@@ -88,10 +88,10 @@ class BasicParser(Parser):
     @_('PRINT STRING')
     def statement(self, p):
         return ('print', p.STRING)
-
+    
 if __name__ == '__main__':
-    lexer = jametLang_lexer.BasicLexer()
-    parser = BasicParser()
+    lexer = jametLang_lexer.leksikal()
+    parser = sintaksis()
     env = {}
     while True:
         try:
