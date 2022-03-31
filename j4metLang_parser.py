@@ -1,9 +1,9 @@
 from sly import Parser
 
-import rhs_lexer
+import j4m3tLang_lexer
 
 class BasicParser(Parser):
-    tokens = rhs_lexer.BasicLexer.tokens
+    tokens = j4m3tLang_lexer.BasicLexer.tokens
 
     precedence = (
         ('left', '+', '-'),
@@ -95,7 +95,7 @@ if __name__ == '__main__':
     env = {}
     while True:
         try:
-            text = input('rhs > ')
+            text = input('j4m3t > ')
         except EOFError:
             break
         if text:
