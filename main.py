@@ -4,7 +4,7 @@ import jametLang_parser
 
 from sys import *
 
-#MASUKAN LANGSUNG
+#MASUKAN LANGSUNG DENGAN TERMINAL PADA PROGRAM
 if __name__ == '__main__':
     lexer = jametLang_lexer.leksikal()
     parser = jametLang_parser.sintaksis()
